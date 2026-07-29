@@ -1,0 +1,54 @@
+name: Update Rancher lifecycle data
+
+on:
+  schedule:
+    - cron: "17 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lifecycle-data-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Fetch, validate and publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate current catalog
+        run: python tools/validate_catalog.py
+
+      - name: Fetch official SUSE data
+        id: update
+        run: |
+          python tools/update_catalog.py \
+            --github-output "${GITHUB_OUTPUT}"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Validate updated catalog
+        run: python tools/validate_catalog.py
+
+      - name: Commit published data
+        if: steps.update.outputs.publish_changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add report_engine/data/lifecycle.json status.json
+          git diff --cached --check
+          git diff --cached --quiet && exit 0
+          git commit -m "Update Rancher lifecycle data"
+          git push
