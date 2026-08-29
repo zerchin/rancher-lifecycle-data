@@ -1,7 +1,7 @@
 {
-  "last_successful_check": "2026-08-28T03:35:12.458290+00:00",
-  "data_version": "2026-08-28.033512",
-  "data_as_of": "2026-08-28",
-  "rancher_matrix_count": 148,
-  "discovered_rancher_versions": 148
+  "last_successful_check": "2026-08-29T02:11:47.115811+00:00",
+  "data_version": "2026-08-29.021147",
+  "data_as_of": "2026-08-29",
+  "rancher_matrix_count": 149,
+  "discovered_rancher_versions": 149
 }
