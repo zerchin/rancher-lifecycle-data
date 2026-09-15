@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "data_version": "2026-08-29.021147",
-  "as_of": "2026-08-29",
+  "data_version": "2026-09-15.221356",
+  "as_of": "2026-09-15",
   "sources": {
     "kubernetes": "https://kubernetes.io/releases/patch-releases/",
     "rancher": "https://www.suse.com/lifecycle/#suse-rancher-prime",
@@ -33,6 +33,11 @@
       }
     },
     "rancher": {
+      "2.15": {
+        "ga": "2026-08-27",
+        "eom": "2027-02-27",
+        "eol": "2028-02-27"
+      },
       "2.14": {
         "ga": "2026-04-30",
         "eom": "2026-10-30",
