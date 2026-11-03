@@ -1,7 +1,7 @@
 {
-  "last_successful_check": "2026-10-31T22:29:15.468620+00:00",
-  "data_version": "2026-10-03.220758",
-  "data_as_of": "2026-10-03",
-  "rancher_matrix_count": 154,
-  "discovered_rancher_versions": 154
+  "last_successful_check": "2026-11-03T01:35:24.714138+00:00",
+  "data_version": "2026-11-03.013524",
+  "data_as_of": "2026-11-03",
+  "rancher_matrix_count": 158,
+  "discovered_rancher_versions": 158
 }
