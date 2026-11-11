@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "data_version": "2026-11-03.013524",
-  "as_of": "2026-11-03",
+  "data_version": "2026-11-11.000201",
+  "as_of": "2026-11-11",
   "sources": {
     "kubernetes": "https://kubernetes.io/releases/patch-releases/",
     "rancher": "https://www.suse.com/lifecycle/#suse-rancher-prime",
@@ -15489,6 +15489,120 @@
               },
               "1.34": {
                 "provisioned": "Yes (x86 / arm64 / mixed)",
+                "imported": "Yes"
+              }
+            }
+          }
+        }
+      },
+      "2.11.19": {
+        "source": "https://www.suse.com/suse-rancher/support-matrix/all-supported-versions/rancher-v2-11-19/",
+        "platforms": {
+          "aks": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {}
+          },
+          "eks": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {}
+          },
+          "gke": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {}
+          },
+          "k3s": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {
+              "1.32": {
+                "provisioned": "Yes (x86 Only)",
+                "imported": "Yes"
+              },
+              "1.31": {
+                "provisioned": "Yes (x86 Only)",
+                "imported": "Yes"
+              },
+              "1.30": {
+                "provisioned": "Yes (x86 Only)",
+                "imported": "Yes"
+              }
+            }
+          },
+          "kubernetes": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {}
+          },
+          "rke1": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {
+              "1.32": {
+                "provisioned": "Yes",
+                "imported": "Yes"
+              },
+              "1.31": {
+                "provisioned": "Yes",
+                "imported": "Yes"
+              },
+              "1.30": {
+                "provisioned": "Yes",
+                "imported": "Yes"
+              }
+            }
+          },
+          "rke2": {
+            "certified_min": "1.30",
+            "certified_max": "1.32",
+            "certified_versions": [
+              "1.30",
+              "1.31",
+              "1.32"
+            ],
+            "modes": {
+              "1.32": {
+                "provisioned": "Yes",
+                "imported": "Yes"
+              },
+              "1.31": {
+                "provisioned": "Yes",
+                "imported": "Yes"
+              },
+              "1.30": {
+                "provisioned": "Yes",
                 "imported": "Yes"
               }
             }
